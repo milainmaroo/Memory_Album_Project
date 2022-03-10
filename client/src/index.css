@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #77aa77;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2377aa77'/%3E%3Cstop offset='1' stop-color='%234fd'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* Header */
+.header {
+    text-align: center;
+    margin: 20px 200px;
+    padding: 7px 0;
+    background-color: #fff;
+    color: #48C9B0;
+    border-radius: 10px;
+}
+
+/* Main Container */
+.main-container {
+    margin: 0 210px;
+}
+
+/* Posts */
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 45%;
+}
+
+/* Post */
+.post {
+    max-width: 250px;
+    margin: 10px;
+}
+
+.overlays {
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.overlay-container {
+    display: flex;
+}
+
+.selected-file {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 250px;
+    height: 150px;
+    z-index: -1;
+}
+
+.overlay,
+.overlay2 {
+    position: absolute;
+}
+
+.overlay {
+    padding: 0 10px;;
+}
+
+
+.details {
+    background: #fff;
+    padding: 10px 15px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.details p, h3, .btns {
+    padding: 7px 0;
+}
+
+
+.edit-btn,
+.like-btn,
+.delete-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.edit-btn {
+    color: #fff;
+    margin-top: 11px;
+    position: absolute;
+    right: -230px;
+}
+
+.like-btn { 
+    color: #48C9B0;
+    padding: 3px;
+}
+
+.delete-btn {
+    float: right;
+    padding: 3px;
+    color: #e60000;
+}
+
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 93px;
+    right: 230px;
+    margin: 10px;
+}
+
+.form h3 {
+    text-align: center;
+}
+
+.form input, 
+.form button {
+    border-color: #e8e8e8;
+    margin: 6px 0;
+    height: 40px;
+    width: 100%;
+    border-radius: 3px;
+    padding-left: 5px;
+}
+
+.form textarea {
+    height: 70px;
+    padding-left: 5px;
+}
+
+.form .submit,
+.form .clear {
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form .submit {
+    background-color: #48C9B0;
+}
+
+.form .clear {
+    background-color: #e60000;
+}
+
+/* Mobile Screen */
+@media only screen and (min-width: 320px) and (max-width: 750px) {
+    /* Header */
+    .header h1 {
+        border: 1px solid #fff;
+        position: absolute;
+        right: 70px;
+        padding: 7px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    /* Posts */
+    .posts {
+        position: absolute;
+        top: 560px;
+        right: -110px;
+    }
+
+    /* Post */
+    .post {
+        margin: 10px;
+    }
+
+    /* Form */
+    .form {
+        top: 100px;
+        right: 40px;
+    }   
+
+}
+
